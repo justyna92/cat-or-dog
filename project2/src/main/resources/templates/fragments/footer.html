@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+</head>
+<body>
+	<div th:fragment="footer">
+		<footer class="footer">
+	      <div class="container">
+	        <span class="text-muted"> <!-- 'sec:authorize' from thymeleaf extra. After ':' call method from SpringSecurity-->
+							<!-- Using the sec:authentication = "name" attribute is equivalent to using the #authentication object. 
+	        				The value of the "name" property of the authentication object should appear here. -->
+							October 2017 
+							<span sec:authorize="isAuthenticated()"> 
+								| Logged: <span sec:authentication="name"></span> 
+								| Role: <span sec:authentication="principal.authorities"></span>
+							</span>
+			</span>
+	      </div>
+    </footer>
+
+	</div>
+	<script type="text/javascript"
+		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

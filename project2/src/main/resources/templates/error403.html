@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: include-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h2 style="font-weight: bold; font-size: 3em">403 - Access is denied</h2>
+        <div th:inline="text" class="info">
+        	<p><span style="color: blue">[[${#httpServletRequest.remoteUser.toUpperCase()}]]</span>
+                does not have permission to access this page. </p>
+            <p>Change your role and try again!</p>
+        </div>
+        <div class="redx">
+          <img src="../../picture/redx.png" />
+        </div>      
+				
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="fragments/header :: include-css"></div>
+</head>
+<body>
+
+	<div th:replace="fragments/header :: header" />
+
+	<div class="container">
+		<div class="starter-template">
+			<div class="dog">
+				<img src="../../picture/cartoon-dog.png" />
+			</div>
+			<div class="text">
+				<h1>Dog or cat?</h1>
+				<h2>Choose and sign in!</h2>
+			</div>
+			<div class="cat">
+				<img src="../../picture/cartoon-cats.png" />
+			</div>
+			
+		</div>
+	</div>
+
+	<div th:replace="fragments/footer :: footer" />
+
+</body>
+</html>

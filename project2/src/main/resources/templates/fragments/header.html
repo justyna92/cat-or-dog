@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<div th:fragment="include-css">
+	
+		<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css" />
+		
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  	
+	  	<title>Dog or cat?</title>
+	</div>
+</head>
+<body>
+	<div th:fragment="header">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" th:href="@{/}">Dog or cat?</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a th:href="@{/home}">Home</a></li>
+					<li><a th:href="@{/dog}">Dog</a></li>
+					<li><a th:href="@{/cat}">Cat</a></li>
+					<li><a th:href="@{/about}">Technologies</a></li>
+				</ul>
+				<form th:action="@{/logout}" method="post">
+					<button type="submit" class="btn btn-link" value="Sign Out" style="margin-top: 6px">
+					<span class="glyphicon glyphicon-off" aria-hidden="true" style="font-size: 20px"></span>
+					</button>
+					
+				</form>
+			</div>
+		</nav>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="fragments/header :: include-css" />
+</head>
+<body>
+
+	<div th:replace="fragments/header :: header" />
+
+	<div class="container">
+		<div class="starter-template">
+		
+			<div class="film">
+				<button id="clickme" type="button" onclick="watchFilm()"
+					class="btn btn-primary btn-lg">Click Me!</button>
+				<iframe width="854" height="480"
+					src="https://www.youtube.com/embed/T06C3Pqxfq4"> </iframe>
+			</div>
+			<div class="picture">
+				<img src="../../picture/cartoon-cat-free.png" onmouseover="giveSound(this)" onmouseout="mouseOverMe()"/>
+				<p>Mouse over me!</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div th:replace="fragments/footer :: footer" />
+	<script type="text/javascript" src="../../js/animations.js"></script>
+</body>
+</html>
